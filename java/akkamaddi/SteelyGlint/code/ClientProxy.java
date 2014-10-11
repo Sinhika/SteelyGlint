@@ -1,18 +1,15 @@
 package akkamaddi.SteelyGlint.code;
 
-import cpw.mods.fml.client.registry.RenderingRegistry;
-import net.minecraftforge.client.MinecraftForgeClient;
 
-public class ClientProxy extends CommonProxy
+public class ClientProxy extends akkamaddi.akkamaddiCore.api.ClientProxy
 {
     @Override
     public void registerRenderers()
     {
         // This is for rendering entities and so forth later on
+        //Armor Renderers
+        SteelyGlintCore.rendererLowSteel = addArmor("lowSteel");
+        SteelyGlintCore.rendererHighSteel = addArmor("highSteel");
     }
 
-    public int addArmor(String armor)
-    {
-        return RenderingRegistry.addNewArmourRendererPrefix(armor);
-    }
 }
