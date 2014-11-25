@@ -31,7 +31,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 
 @Mod(modid = "steelyglint", name = "Steely Glint, iron and steel alloys", 
-	version = "1.1.0", 
+	version = "1.7.10-1.1.1", 
 	dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore")
 public class SteelyGlintCore {
 	// The instance of your mod that Forge uses.
@@ -110,7 +110,8 @@ public class SteelyGlintCore {
 	public static Block blockHighSteel;
 
 	public static boolean enableRecycling;
-
+	public static boolean itemizeMobs;
+	
 	// tab
 	public static SimpleTab tabAkkamaddiSteely = new SimpleTab(
 			"tabAkkamaddiSteely");
@@ -168,6 +169,8 @@ public class SteelyGlintCore {
 		enableRecycling = config.get(Configuration.CATEGORY_GENERAL,
 				"Enable Steely Glint item recycling recipes: false or true?",
 				false).getBoolean(false);
+		itemizeMobs = config.get(Configuration.CATEGORY_GENERAL,
+				"Equip mobs with steel gear, true or false", false).getBoolean(false);
 		config.save();
 
 		// define items
@@ -373,9 +376,9 @@ public class SteelyGlintCore {
 		setTabIcons();
 		// recipes
 		SteelyRecipes.doSteelyRecipes();
-		
-		APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
-
+		if (itemizeMobs) {
+			APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
+		}
 	} // end preInit()
 
 	@EventHandler
