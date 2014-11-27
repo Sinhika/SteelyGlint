@@ -353,6 +353,11 @@ public class SteelyGlintCore {
 		blockRefinedIron.setHarvestLevel( "pickaxe", 0);
 		blockLowSteel.setHarvestLevel( "pickaxe", 0);
 
+		((SimpleBlock) blockHighSteel).setAsBeaconBase(true);
+		((SimpleBlock) blockCarbonizedIron).setAsBeaconBase(true);
+		((SimpleBlock) blockRefinedIron).setAsBeaconBase(true);
+		((SimpleBlock) blockLowSteel).setAsBeaconBase(true);
+		
 		toolCarbonizedIron.customCraftingMaterial = SteelyGlintCore.carbonizedIronIngot;
 		toolRefinedIron.customCraftingMaterial = SteelyGlintCore.refinedIronIngot;
 		toolLowSteel.customCraftingMaterial = SteelyGlintCore.lowSteelIngot;
