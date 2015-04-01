@@ -1,4 +1,4 @@
-package akkamaddi.SteelyGlint.code;
+package akkamaddi.plugins.SteelyGlint;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -9,93 +9,93 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import alexndr.SimpleOres.plugins.fusion.FusionRecipes;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class SteelyRecipes
+public class Recipes
 {
     @SuppressWarnings("unchecked")
 	public static void doSteelyRecipes()
     {
         // Ore Dictionary
 		OreDictionary.registerOre("ingotCarbonizedIron", new ItemStack(
-				SteelyGlintCore.carbonizedIronIngot));
+				SteelyGlint.carbonizedIronIngot));
 		OreDictionary.registerOre("ingotRefinedIron", new ItemStack(
-				SteelyGlintCore.refinedIronIngot));
+				SteelyGlint.refinedIronIngot));
 		OreDictionary.registerOre("ingotLowSteel", new ItemStack(
-				SteelyGlintCore.lowSteelIngot));
+				SteelyGlint.lowSteelIngot));
 		OreDictionary.registerOre("ingotHighSteel", new ItemStack(
-				SteelyGlintCore.highSteelIngot));
+				SteelyGlint.highSteelIngot));
 		OreDictionary.registerOre("ingotSteel", new ItemStack(
-				SteelyGlintCore.lowSteelIngot));
+				SteelyGlint.lowSteelIngot));
 		OreDictionary.registerOre("ingotSteel", new ItemStack(
-				SteelyGlintCore.highSteelIngot));
+				SteelyGlint.highSteelIngot));
         
         // recipes: Crafting
         //Storage Block
 		GameRegistry.addRecipe(new ItemStack(
-				SteelyGlintCore.blockCarbonizedIron, 1), new Object[] { "AAA",
-				"AAA", "AAA", 'A', SteelyGlintCore.carbonizedIronIngot });
-		GameRegistry.addRecipe(new ItemStack(SteelyGlintCore.blockRefinedIron,
+				SteelyGlint.blockCarbonizedIron, 1), new Object[] { "AAA",
+				"AAA", "AAA", 'A', SteelyGlint.carbonizedIronIngot });
+		GameRegistry.addRecipe(new ItemStack(SteelyGlint.blockRefinedIron,
 				1), new Object[] { "AAA", "AAA", "AAA", 'A',
-				SteelyGlintCore.refinedIronIngot });
-		GameRegistry.addRecipe(new ItemStack(SteelyGlintCore.blockLowSteel, 1),
+				SteelyGlint.refinedIronIngot });
+		GameRegistry.addRecipe(new ItemStack(SteelyGlint.blockLowSteel, 1),
 				new Object[] { "AAA", "AAA", "AAA", 'A',
-						SteelyGlintCore.lowSteelIngot });
+						SteelyGlint.lowSteelIngot });
 		GameRegistry.addRecipe(
-				new ItemStack(SteelyGlintCore.blockHighSteel, 1), new Object[] {
+				new ItemStack(SteelyGlint.blockHighSteel, 1), new Object[] {
 						"AAA", "AAA", "AAA", 'A',
-						SteelyGlintCore.highSteelIngot });
+						SteelyGlint.highSteelIngot });
         
         //Item Recipe
         //Ingot Recipe
 		GameRegistry.addShapelessRecipe(new ItemStack(
-				SteelyGlintCore.carbonizedIronIngot, 9),
-				new Object[] { SteelyGlintCore.blockCarbonizedIron });
+				SteelyGlint.carbonizedIronIngot, 9),
+				new Object[] { SteelyGlint.blockCarbonizedIron });
 		GameRegistry.addShapelessRecipe(new ItemStack(
-				SteelyGlintCore.refinedIronIngot, 9),
-				new Object[] { SteelyGlintCore.blockRefinedIron });
+				SteelyGlint.refinedIronIngot, 9),
+				new Object[] { SteelyGlint.blockRefinedIron });
 		GameRegistry.addShapelessRecipe(new ItemStack(
-				SteelyGlintCore.lowSteelIngot, 9),
-				new Object[] { SteelyGlintCore.blockLowSteel });
+				SteelyGlint.lowSteelIngot, 9),
+				new Object[] { SteelyGlint.blockLowSteel });
 		GameRegistry.addShapelessRecipe(new ItemStack(
-				SteelyGlintCore.highSteelIngot, 9),
-				new Object[] { SteelyGlintCore.blockHighSteel });
+				SteelyGlint.highSteelIngot, 9),
+				new Object[] { SteelyGlint.blockHighSteel });
 		
         // Items
         // Chunk Recipes
 		GameRegistry.addShapelessRecipe(new ItemStack(
-				SteelyGlintCore.mediumCarbonizedIronChunkItem, 2),
-				new Object[] { SteelyGlintCore.largeCarbonizedIronChunkItem });
+				SteelyGlint.mediumCarbonizedIronChunkItem, 2),
+				new Object[] { SteelyGlint.largeCarbonizedIronChunkItem });
 		GameRegistry.addShapelessRecipe(new ItemStack(
-				SteelyGlintCore.mediumRefinedIronChunkItem, 2),
-				new Object[] { SteelyGlintCore.largeRefinedIronChunkItem });
+				SteelyGlint.mediumRefinedIronChunkItem, 2),
+				new Object[] { SteelyGlint.largeRefinedIronChunkItem });
 
 		GameRegistry.addShapelessRecipe(new ItemStack(
-				SteelyGlintCore.largeCarbonizedIronChunkItem), new Object[] {
-				SteelyGlintCore.mediumCarbonizedIronChunkItem,
-				SteelyGlintCore.mediumCarbonizedIronChunkItem,
-				SteelyGlintCore.mediumCarbonizedIronChunkItem,
+				SteelyGlint.largeCarbonizedIronChunkItem), new Object[] {
+				SteelyGlint.mediumCarbonizedIronChunkItem,
+				SteelyGlint.mediumCarbonizedIronChunkItem,
+				SteelyGlint.mediumCarbonizedIronChunkItem,
 				new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE) });
 		GameRegistry.addShapelessRecipe(new ItemStack(
-				SteelyGlintCore.largeRefinedIronChunkItem), new Object[] {
-				SteelyGlintCore.mediumRefinedIronChunkItem,
-				SteelyGlintCore.mediumRefinedIronChunkItem,
-				SteelyGlintCore.mediumRefinedIronChunkItem,
+				SteelyGlint.largeRefinedIronChunkItem), new Object[] {
+				SteelyGlint.mediumRefinedIronChunkItem,
+				SteelyGlint.mediumRefinedIronChunkItem,
+				SteelyGlint.mediumRefinedIronChunkItem,
 				new ItemStack(Items.dye, 1, 15) });
 
 		GameRegistry.addShapelessRecipe(new ItemStack(
-				SteelyGlintCore.largeLowSteelChunkItem), new Object[] {
-				SteelyGlintCore.mediumCarbonizedIronChunkItem,
-				SteelyGlintCore.mediumCarbonizedIronChunkItem,
-				SteelyGlintCore.mediumRefinedIronChunkItem,
+				SteelyGlint.largeLowSteelChunkItem), new Object[] {
+				SteelyGlint.mediumCarbonizedIronChunkItem,
+				SteelyGlint.mediumCarbonizedIronChunkItem,
+				SteelyGlint.mediumRefinedIronChunkItem,
 				new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
 				new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
 				new ItemStack(Items.dye, 1, 15), Items.gunpowder,
 				new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
 				new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE) });
 		GameRegistry.addShapelessRecipe(new ItemStack(
-				SteelyGlintCore.largeHighSteelChunkItem), new Object[] {
-				SteelyGlintCore.mediumRefinedIronChunkItem,
-				SteelyGlintCore.mediumRefinedIronChunkItem,
-				SteelyGlintCore.mediumCarbonizedIronChunkItem,
+				SteelyGlint.largeHighSteelChunkItem), new Object[] {
+				SteelyGlint.mediumRefinedIronChunkItem,
+				SteelyGlint.mediumRefinedIronChunkItem,
+				SteelyGlint.mediumCarbonizedIronChunkItem,
 				new ItemStack(Items.dye, 1, 15),
 				new ItemStack(Items.dye, 1, 15),
 				new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
@@ -107,395 +107,395 @@ public class SteelyRecipes
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.carbonizedIronPickaxe,
+				.add(new ShapedOreRecipe(SteelyGlint.carbonizedIronPickaxe,
 						true, new Object[] { "XXX", " Y ", " Y ", 'X',
 								"ingotCarbonizedIron", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.carbonizedIronAxe,
+				.add(new ShapedOreRecipe(SteelyGlint.carbonizedIronAxe,
 						true, new Object[] { "XX ", "XY ", " Y ", 'X',
 								"ingotCarbonizedIron", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.carbonizedIronShovel,
+				.add(new ShapedOreRecipe(SteelyGlint.carbonizedIronShovel,
 						true, new Object[] { "X", "Y", "Y", 'X',
 								"ingotCarbonizedIron", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.carbonizedIronSword,
+				.add(new ShapedOreRecipe(SteelyGlint.carbonizedIronSword,
 						true, new Object[] { "X", "X", "Y", 'X',
 								"ingotCarbonizedIron", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.carbonizedIronHoe,
+				.add(new ShapedOreRecipe(SteelyGlint.carbonizedIronHoe,
 						true, new Object[] { "XX ", " Y ", " Y ", 'X',
 								"ingotCarbonizedIron", 'Y', "stickWood" }));
 		// Refined Iron Tools
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.refinedIronPickaxe,
+				.add(new ShapedOreRecipe(SteelyGlint.refinedIronPickaxe,
 						true, new Object[] { "XXX", " Y ", " Y ", 'X',
 								"ingotRefinedIron", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.refinedIronAxe, true,
+				.add(new ShapedOreRecipe(SteelyGlint.refinedIronAxe, true,
 						new Object[] { "XX ", "XY ", " Y ", 'X',
 								"ingotRefinedIron", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.refinedIronShovel,
+				.add(new ShapedOreRecipe(SteelyGlint.refinedIronShovel,
 						true, new Object[] { "X", "Y", "Y", 'X',
 								"ingotRefinedIron", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.refinedIronSword,
+				.add(new ShapedOreRecipe(SteelyGlint.refinedIronSword,
 						true, new Object[] { "X", "X", "Y", 'X',
 								"ingotRefinedIron", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.refinedIronHoe, true,
+				.add(new ShapedOreRecipe(SteelyGlint.refinedIronHoe, true,
 						new Object[] { "XX ", " Y ", " Y ", 'X',
 								"ingotRefinedIron", 'Y', "stickWood" }));
 		// Low Steel Tool Recipes
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.lowSteelPickaxe, true,
+				.add(new ShapedOreRecipe(SteelyGlint.lowSteelPickaxe, true,
 						new Object[] { "XXX", " Y ", " Y ", 'X',
 								"ingotLowSteel", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.lowSteelAxe, true,
+				.add(new ShapedOreRecipe(SteelyGlint.lowSteelAxe, true,
 						new Object[] { "XX ", "XY ", " Y ", 'X',
 								"ingotLowSteel", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.lowSteelShovel, true,
+				.add(new ShapedOreRecipe(SteelyGlint.lowSteelShovel, true,
 						new Object[] { "X", "Y", "Y", 'X', "ingotLowSteel",
 								'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.lowSteelSword, true,
+				.add(new ShapedOreRecipe(SteelyGlint.lowSteelSword, true,
 						new Object[] { "X", "X", "Y", 'X', "ingotLowSteel",
 								'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.lowSteelHoe, true,
+				.add(new ShapedOreRecipe(SteelyGlint.lowSteelHoe, true,
 						new Object[] { "XX ", " Y ", " Y ", 'X',
 								"ingotLowSteel", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.lowSteelHoe, true,
+				.add(new ShapedOreRecipe(SteelyGlint.lowSteelHoe, true,
 						new Object[] { "XX ", " Y ", " Y ", 'X',
 								"ingotLowSteel", 'Y', "stickWood" }));
 		// Low Steel Armor Recipes
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.lowSteelHelm, true,
+				.add(new ShapedOreRecipe(SteelyGlint.lowSteelHelm, true,
 						new Object[] { "XXX", "X X", 'X', "ingotLowSteel" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.lowSteelChest, true,
+				.add(new ShapedOreRecipe(SteelyGlint.lowSteelChest, true,
 						new Object[] { "X X", "XXX", "XXX", 'X',
 								"ingotLowSteel" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.lowSteelLegs, true,
+				.add(new ShapedOreRecipe(SteelyGlint.lowSteelLegs, true,
 						new Object[] { "XXX", "X X", "X X", 'X',
 								"ingotLowSteel" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.lowSteelBoots, true,
+				.add(new ShapedOreRecipe(SteelyGlint.lowSteelBoots, true,
 						new Object[] { "X X", "X X", 'X', "ingotLowSteel" }));
 		// High Steel Tool Recipes
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.highSteelPickaxe,
+				.add(new ShapedOreRecipe(SteelyGlint.highSteelPickaxe,
 						true, new Object[] { "XXX", " Y ", " Y ", 'X',
 								"ingotHighSteel", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.highSteelAxe, true,
+				.add(new ShapedOreRecipe(SteelyGlint.highSteelAxe, true,
 						new Object[] { "XX ", "XY ", " Y ", 'X',
 								"ingotHighSteel", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.highSteelShovel, true,
+				.add(new ShapedOreRecipe(SteelyGlint.highSteelShovel, true,
 						new Object[] { "X", "Y", "Y", 'X', "ingotHighSteel",
 								'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.highSteelSword, true,
+				.add(new ShapedOreRecipe(SteelyGlint.highSteelSword, true,
 						new Object[] { "X", "X", "Y", 'X', "ingotHighSteel",
 								'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.highSteelHoe, true,
+				.add(new ShapedOreRecipe(SteelyGlint.highSteelHoe, true,
 						new Object[] { "XX ", " Y ", " Y ", 'X',
 								"ingotHighSteel", 'Y', "stickWood" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.highSteelHoe, true,
+				.add(new ShapedOreRecipe(SteelyGlint.highSteelHoe, true,
 						new Object[] { "XX ", " Y ", " Y ", 'X',
 								"ingotHighSteel", 'Y', "stickWood" }));
 		// High Steel Armor Recipes
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.highSteelHelm, true,
+				.add(new ShapedOreRecipe(SteelyGlint.highSteelHelm, true,
 						new Object[] { "XXX", "X X", 'X', "ingotHighSteel" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.highSteelChest, true,
+				.add(new ShapedOreRecipe(SteelyGlint.highSteelChest, true,
 						new Object[] { "X X", "XXX", "XXX", 'X',
 								"ingotHighSteel" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.highSteelLegs, true,
+				.add(new ShapedOreRecipe(SteelyGlint.highSteelLegs, true,
 						new Object[] { "XXX", "X X", "X X", 'X',
 								"ingotHighSteel" }));
 		CraftingManager
 				.getInstance()
 				.getRecipeList()
-				.add(new ShapedOreRecipe(SteelyGlintCore.highSteelBoots, true,
+				.add(new ShapedOreRecipe(SteelyGlint.highSteelBoots, true,
 						new Object[] { "X X", "X X", 'X', "ingotHighSteel" }));
 		
        // recipes: Smelting
 		GameRegistry.addSmelting(
-				SteelyGlintCore.largeCarbonizedIronChunkItem,
-				new ItemStack(SteelyGlintCore.carbonizedIronIngot), 0.8F);
+				SteelyGlint.largeCarbonizedIronChunkItem,
+				new ItemStack(SteelyGlint.carbonizedIronIngot), 0.8F);
 		GameRegistry.addSmelting(
-				SteelyGlintCore.largeRefinedIronChunkItem,
-				new ItemStack(SteelyGlintCore.refinedIronIngot), 0.8F);
-		GameRegistry.addSmelting(SteelyGlintCore.largeLowSteelChunkItem,
-				new ItemStack(SteelyGlintCore.lowSteelIngot), 1.2F);
+				SteelyGlint.largeRefinedIronChunkItem,
+				new ItemStack(SteelyGlint.refinedIronIngot), 0.8F);
+		GameRegistry.addSmelting(SteelyGlint.largeLowSteelChunkItem,
+				new ItemStack(SteelyGlint.lowSteelIngot), 1.2F);
 		GameRegistry.addSmelting(
-				SteelyGlintCore.largeHighSteelChunkItem, new ItemStack(
-						SteelyGlintCore.highSteelIngot), 1.4F);
-		GameRegistry.addSmelting(SteelyGlintCore.grittySoot,
+				SteelyGlint.largeHighSteelChunkItem, new ItemStack(
+						SteelyGlint.highSteelIngot), 1.4F);
+		GameRegistry.addSmelting(SteelyGlint.grittySoot,
 				new ItemStack(Items.gunpowder), 0.2F);
         
         // recipes: Fusion Furnace
 		FusionRecipes.addSmelting(new ItemStack(Items.iron_ingot), new ItemStack(
 				Items.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(
 				Items.gunpowder), new ItemStack(
-				SteelyGlintCore.mediumCarbonizedIronChunkItem), 2.0F);
+				SteelyGlint.mediumCarbonizedIronChunkItem), 2.0F);
 		FusionRecipes
 				.addSmelting(new ItemStack(Items.iron_ingot), new ItemStack(
 						Items.dye, 1, 15), new ItemStack(Items.gunpowder),
 						new ItemStack(
-								SteelyGlintCore.mediumRefinedIronChunkItem),
+								SteelyGlint.mediumRefinedIronChunkItem),
 						2.0F);
 		// make gunpowder
 		FusionRecipes.addSmelting(new ItemStack(Items.sugar, 4, 0),
 				new ItemStack(Items.coal, 4, OreDictionary.WILDCARD_VALUE),
 				new ItemStack(Items.flint, 2, 0), new ItemStack(
-						SteelyGlintCore.grittySoot), 0.4F);
+						SteelyGlint.grittySoot), 0.4F);
 
-        if (SteelyGlintCore.enableRecycling)
+        if (SteelyGlint.enableRecycling)
         {
 			// Carbonized Iron
 			FusionRecipes
 					.addSmelting(new ItemStack(
-							SteelyGlintCore.carbonizedIronSword, 1,
+							SteelyGlint.carbonizedIronSword, 1,
 							OreDictionary.WILDCARD_VALUE), new ItemStack(
 							Blocks.gravel), new ItemStack(Items.coal, 1,
 							OreDictionary.WILDCARD_VALUE), new ItemStack(
-							SteelyGlintCore.largeCarbonizedIronChunkItem), 5.0F);
+							SteelyGlint.largeCarbonizedIronChunkItem), 5.0F);
 			FusionRecipes
 					.addSmelting(new ItemStack(
-							SteelyGlintCore.carbonizedIronShovel, 1,
+							SteelyGlint.carbonizedIronShovel, 1,
 							OreDictionary.WILDCARD_VALUE), new ItemStack(
 							Blocks.gravel), new ItemStack(Items.coal, 1,
 							OreDictionary.WILDCARD_VALUE), new ItemStack(
-							SteelyGlintCore.largeCarbonizedIronChunkItem), 5.0F);
+							SteelyGlint.largeCarbonizedIronChunkItem), 5.0F);
 			FusionRecipes
 					.addSmelting(new ItemStack(
-							SteelyGlintCore.carbonizedIronAxe, 1,
+							SteelyGlint.carbonizedIronAxe, 1,
 							OreDictionary.WILDCARD_VALUE), new ItemStack(
 							Blocks.gravel), new ItemStack(Items.coal, 1,
 							OreDictionary.WILDCARD_VALUE), new ItemStack(
-							SteelyGlintCore.largeCarbonizedIronChunkItem), 5.0F);
+							SteelyGlint.largeCarbonizedIronChunkItem), 5.0F);
 			FusionRecipes
 					.addSmelting(new ItemStack(
-							SteelyGlintCore.carbonizedIronPickaxe, 1,
+							SteelyGlint.carbonizedIronPickaxe, 1,
 							OreDictionary.WILDCARD_VALUE), new ItemStack(
 							Blocks.gravel), new ItemStack(Items.coal, 1,
 							OreDictionary.WILDCARD_VALUE), new ItemStack(
-							SteelyGlintCore.largeCarbonizedIronChunkItem), 5.0F);
+							SteelyGlint.largeCarbonizedIronChunkItem), 5.0F);
 			FusionRecipes
 					.addSmelting(new ItemStack(
-							SteelyGlintCore.carbonizedIronHoe, 1,
+							SteelyGlint.carbonizedIronHoe, 1,
 							OreDictionary.WILDCARD_VALUE), new ItemStack(
 							Blocks.gravel), new ItemStack(Items.coal, 1,
 							OreDictionary.WILDCARD_VALUE), new ItemStack(
-							SteelyGlintCore.largeCarbonizedIronChunkItem), 5.0F);
+							SteelyGlint.largeCarbonizedIronChunkItem), 5.0F);
 			// Refined Iron
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.refinedIronSword, 1,
+					SteelyGlint.refinedIronSword, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeRefinedIronChunkItem),
+					new ItemStack(SteelyGlint.largeRefinedIronChunkItem),
 					5.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.refinedIronShovel, 1,
+					SteelyGlint.refinedIronShovel, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeRefinedIronChunkItem),
+					new ItemStack(SteelyGlint.largeRefinedIronChunkItem),
 					5.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.refinedIronAxe, 1,
+					SteelyGlint.refinedIronAxe, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeRefinedIronChunkItem),
+					new ItemStack(SteelyGlint.largeRefinedIronChunkItem),
 					5.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.refinedIronPickaxe, 1,
+					SteelyGlint.refinedIronPickaxe, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeRefinedIronChunkItem),
+					new ItemStack(SteelyGlint.largeRefinedIronChunkItem),
 					5.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.refinedIronHoe, 1,
+					SteelyGlint.refinedIronHoe, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeRefinedIronChunkItem),
+					new ItemStack(SteelyGlint.largeRefinedIronChunkItem),
 					5.0F);
 			// Low Steel
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.lowSteelHelm, 1,
+					SteelyGlint.lowSteelHelm, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeLowSteelChunkItem),
+					new ItemStack(SteelyGlint.largeLowSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.lowSteelChest, 1,
+					SteelyGlint.lowSteelChest, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel,
 					2, 0), new ItemStack(Items.coal, 2,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(
-					SteelyGlintCore.largeLowSteelChunkItem, 2, 0), 20.0F);
+					SteelyGlint.largeLowSteelChunkItem, 2, 0), 20.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.lowSteelLegs, 1,
+					SteelyGlint.lowSteelLegs, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel,
 					2, 0), new ItemStack(Items.coal, 2,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(
-					SteelyGlintCore.largeLowSteelChunkItem, 2, 0), 20.0F);
+					SteelyGlint.largeLowSteelChunkItem, 2, 0), 20.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.lowSteelBoots, 1,
+					SteelyGlint.lowSteelBoots, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeLowSteelChunkItem),
+					new ItemStack(SteelyGlint.largeLowSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.lowSteelSword, 1,
+					SteelyGlint.lowSteelSword, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeLowSteelChunkItem),
+					new ItemStack(SteelyGlint.largeLowSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.lowSteelShovel, 1,
+					SteelyGlint.lowSteelShovel, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeLowSteelChunkItem),
+					new ItemStack(SteelyGlint.largeLowSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.lowSteelPickaxe, 1,
+					SteelyGlint.lowSteelPickaxe, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeLowSteelChunkItem),
+					new ItemStack(SteelyGlint.largeLowSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.lowSteelAxe, 1,
+					SteelyGlint.lowSteelAxe, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeLowSteelChunkItem),
+					new ItemStack(SteelyGlint.largeLowSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.lowSteelHoe, 1,
+					SteelyGlint.lowSteelHoe, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeLowSteelChunkItem),
+					new ItemStack(SteelyGlint.largeLowSteelChunkItem),
 					10.0F);
 			// High Steel
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.highSteelHelm, 1,
+					SteelyGlint.highSteelHelm, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeHighSteelChunkItem),
+					new ItemStack(SteelyGlint.largeHighSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.highSteelChest, 1,
+					SteelyGlint.highSteelChest, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel,
 					2, 0), new ItemStack(Items.coal, 2,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(
-					SteelyGlintCore.largeHighSteelChunkItem, 2, 0), 20.0F);
+					SteelyGlint.largeHighSteelChunkItem, 2, 0), 20.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.highSteelLegs, 1,
+					SteelyGlint.highSteelLegs, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel,
 					2, 0), new ItemStack(Items.coal, 2,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(
-					SteelyGlintCore.largeHighSteelChunkItem, 2, 0), 20.0F);
+					SteelyGlint.largeHighSteelChunkItem, 2, 0), 20.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.highSteelBoots, 1,
+					SteelyGlint.highSteelBoots, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeHighSteelChunkItem),
+					new ItemStack(SteelyGlint.largeHighSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.highSteelSword, 1,
+					SteelyGlint.highSteelSword, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeHighSteelChunkItem),
+					new ItemStack(SteelyGlint.largeHighSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.highSteelShovel, 1,
+					SteelyGlint.highSteelShovel, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeHighSteelChunkItem),
+					new ItemStack(SteelyGlint.largeHighSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.highSteelPickaxe, 1,
+					SteelyGlint.highSteelPickaxe, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeHighSteelChunkItem),
+					new ItemStack(SteelyGlint.largeHighSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.highSteelAxe, 1,
+					SteelyGlint.highSteelAxe, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeHighSteelChunkItem),
+					new ItemStack(SteelyGlint.largeHighSteelChunkItem),
 					10.0F);
 			FusionRecipes.addSmelting(new ItemStack(
-					SteelyGlintCore.highSteelHoe, 1,
+					SteelyGlint.highSteelHoe, 1,
 					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
 					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
-					new ItemStack(SteelyGlintCore.largeHighSteelChunkItem),
+					new ItemStack(SteelyGlint.largeHighSteelChunkItem),
 					10.0F);
         }
     }
