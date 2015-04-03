@@ -6,7 +6,6 @@ package akkamaddi.plugins.SteelyGlint;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
-import akkamaddi.api.core.ModInfo;
 import alexndr.api.content.blocks.SimpleBlock;
 import alexndr.api.content.items.SimpleArmor;
 import alexndr.api.content.items.SimpleAxe;
