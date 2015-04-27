@@ -58,10 +58,12 @@ public class Recipes
                 Content.lowSteelIngot));
         OreDictionary.registerOre("ingotHighSteel", new ItemStack(
                 Content.highSteelIngot));
-        OreDictionary.registerOre("ingotSteel", new ItemStack(
-                Content.lowSteelIngot));
-        OreDictionary.registerOre("ingotSteel", new ItemStack(
-                Content.highSteelIngot));
+        
+        // removed due to causing conflict with fusion:steel tool recipes.
+//        OreDictionary.registerOre("ingotSteel", new ItemStack(
+//                Content.lowSteelIngot));
+//        OreDictionary.registerOre("ingotSteel", new ItemStack(
+//                Content.highSteelIngot));
     } // end addOreDictEntries()
     
     @SuppressWarnings("unchecked")
@@ -130,6 +132,7 @@ public class Recipes
 				new ItemStack(Items.dye, 1, 15), Items.gunpowder,
 				new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
 				new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE) });
+		
 		GameRegistry.addShapelessRecipe(new ItemStack(
 				Content.largeHighSteelChunkItem), new Object[] {
 				Content.mediumRefinedIronChunkItem,
@@ -349,9 +352,10 @@ public class Recipes
     private static void addFusionFurnaceRecipes()
     {
         // recipes: Fusion Furnace
+        // Changed recipe to require charcoal to avoid conflict with fusion:steel
         FusionFurnaceRecipes.addSmelting(
                 new ItemStack(Items.iron_ingot), 
-                new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE), 
+                new ItemStack(Items.coal, 1, 1), 
                 new ItemStack(Items.gunpowder), 
                 new ItemStack( Content.mediumCarbonizedIronChunkItem), 2.0F);
         
