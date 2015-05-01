@@ -24,7 +24,7 @@ public class Settings extends ASettings
         try {
             LogHelper.verboseInfo(ModInfo.ID, "Loading Settings...");
             config.load();
-            genericSettings(ModInfo.ID, "Tungsten & Tungsten alloys");
+            genericSettings(ModInfo.ID, ModInfo.NAME);
 
              // Armor Stat Modification
             armorStatDefaults();

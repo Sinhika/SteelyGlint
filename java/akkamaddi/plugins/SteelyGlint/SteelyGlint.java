@@ -14,7 +14,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION, 
-dependencies = "required-after:simplecore; required-after:simpleores ; required-after:fusion ; required-after:akkamaddicore; after: GardenStuff")
+dependencies = "required-after:simplecore; required-after:fusion ; required-after:akkamaddicore; after: GardenStuff; after: wootzpigngray")
 public class SteelyGlint 
 {
 	public static SimpleTab tabAkkamaddiSteely;
